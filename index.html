@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Imagem Interativa</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color: #f9f9f9;
+    }
+
+    img {
+      max-width: 90%;
+      width: 400px;
+      height: auto;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <img src="img/img1.JPG" onmouseover="this.src='img/img2.jpg'" onmouseout="this.src='img/img1.JPG'" alt="Imagem Interativa" width="300" />
+</body>
+
+</html>
