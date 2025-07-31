@@ -29,7 +29,31 @@
 </head>
 
 <body>
-  <img src="img/img1.JPG" onmouseover="this.src='img/img2.jpg'" onmouseout="this.src='img/img1.JPG'" alt="Imagem Interativa" width="300" />
+  <img id="imagem" src="img/img1.JPG" alt="Imagem Interativa" width="300" />
+
+  <script>
+    const imagem = document.getElementById('imagem');
+    let imagemAtual = 1;
+
+    imagem.addEventListener('click', () => {
+      if (imagemAtual === 1) {
+        imagem.src = 'img/img2.jpg';
+        imagemAtual = 2;
+      } else {
+        imagem.src = 'img/img1.JPG';
+        imagemAtual = 1;
+      }
+    });
+
+    // Para manter suporte ao mouse:
+    imagem.addEventListener('mouseover', () => {
+      imagem.src = 'img/img2.jpg';
+    });
+
+    imagem.addEventListener('mouseout', () => {
+      imagem.src = imagemAtual === 1 ? 'img/img1.JPG' : 'img/img2.jpg';
+    });
+  </script>
 </body>
 
 </html>
